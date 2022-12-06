@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "../../lab7-i2c"
+		},
+		{
+			"name": "lab-project",
+			"path": ".."
+		},
+		{
+			"name": "lab4-lcd",
+			"path": "../../lab4-lcd"
+		},
+		{
+			"name": "lab5-adc",
+			"path": "../../lab5-adc"
+		}
+	],
+	"settings": {}
+}
