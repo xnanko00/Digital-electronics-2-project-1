@@ -129,7 +129,7 @@ ISR(TIMER1_OVF_vect)
  **********************************************************************/
 ISR(ADC_vect)
 {
-    uint8_t clk, dt;
+    uint8_t clk, dt, speed;
     uint16_t x_value, y_value;
     uint16_t up, down, left, right;
     static short x_move = 0;
@@ -188,18 +188,20 @@ ISR(ADC_vect)
       if (x_move < 0)
         x_move = 15;
 
-      clk = (PINB & (1<<CLK))>>CLK;
-      dt = (PINB & (1<<DT))>>DT;
-      itoa(clk, string, 10);
-      lcd_gotoxy(8, 1);
-      lcd_puts(string);
-      lcd_puts(" ");
-      itoa(dt, string, 10);
-      lcd_puts(string);
-      lcd_puts(" ");
+    clk = (PIND & (1<<CLK))>>ROT_CLK;
+    dt = (PIND & (1<<DT))>>ROT_DT;
+      if (clk>dt)
+      {
+        speed++;
+      }else if (clk<dt){
+        speed--;
+      }
+      
     }
     
     lcd_gotoxy(x_move, y_move);
     lcd_putc(0x00);
+
+
           
 }
