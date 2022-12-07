@@ -16,8 +16,8 @@ The goal of the project is cooperation in pairs, further study of the topic, des
 
 ### Team members
 
-* Member 1 (responsible for xxx)
-* Member Jan Gross 230067 (responsible for github and code)
+* Matej Nanko 220823 (responsible for documentation and code)
+* Jan Gross 230067 (responsible for github and code)
 
 ## Hardware description
 
@@ -28,6 +28,7 @@ Rotary encoder information is in a format of two digital signals for rotation an
 ## Software description
 
 Put flowchats of your algorithm(s). Write descriptive text of your libraries and source files. Put direct links to these files in `src` or `lib` folders.
+<img src="https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/images/flowchart1.png" width=70% height=70%>
 
 ## References
 
