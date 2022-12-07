@@ -1,18 +1,5 @@
 # Project 1
 
-Application of analog joy-stick (2 ADC channels, 1 push button), rotary encoder, and Digilent PmodCLP LCD module.
-
-## Instructions
-
-The goal of the project is cooperation in pairs, further study of the topic, design of own solutions, implementation, creation of project documentation and presentation of results. The division of roles and tasks within the team is up to their members.
-
-* Students work on a project in the labs during the 10th and 11th weeks of the semester.
-
-* Through the BUT e-learning, students submit a link to the GitHub repository, which contains the complete project in PlatfomIO and a descriptive README file. The submission deadline is the day before the next laboratory, i.e. in 2 weeks.
-
-* The source code for the AVR must be written in C and/or Assembly and must be implementable on Arduino Uno board using toolchains from the semester, ie PlatformIO and not in the Arduino-style. No other development tools are allowed.
-
-
 
 ### Team members
 
@@ -21,14 +8,25 @@ The goal of the project is cooperation in pairs, further study of the topic, des
 
 ## Hardware description
 
-Rotary encoder information is in a format of two digital signals for rotation and a digital button, analog joy-stick can be understood as two potentiometers and a digital button.
+Rotary encoder information is in a format of two digital signals for rotation and a digital button, analog joy-stick can be understood as two potentiometers that need to be connected to analog inputs and a digital button. LCD has digital pin connections.
 
 <img src="https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/images/schematic1.png" width=60% height=60%>
 
 ## Software description
 
-Put flowchats of your algorithm(s). Write descriptive text of your libraries and source files. Put direct links to these files in `src` or `lib` folders.
+`src` [main](https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/src/main.c)
+
+`lib` 
+[gpio.h](https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/lib/gpio/gpio.h)
+[lcd.h](https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/lib/lcd/lcd.h)
+[timer.h](https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/include/timer.h)
+
+
 <img src="https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/images/flowchart1.png" width=70% height=70%>
+
+## Video
+
+[Practical implementation example](https://youtube.com/shorts/cnpW_S2geDI?feature=share)
 
 ## References
 
