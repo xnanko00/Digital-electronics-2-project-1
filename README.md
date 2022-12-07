@@ -12,39 +12,26 @@ The goal of the project is cooperation in pairs, further study of the topic, des
 
 * The source code for the AVR must be written in C and/or Assembly and must be implementable on Arduino Uno board using toolchains from the semester, ie PlatformIO and not in the Arduino-style. No other development tools are allowed.
 
-## Recommended GitHub repository structure
 
-   ```c
-   YOUR_PROJECT        // PlatfomIO project
-   ├── include         // Included files
-   ├── lib             // Libraries
-   ├── src             // Source file(s)
-   │   └── main.c
-   ├── test            // No need this
-   ├── platformio.ini  // Project Configuration File
-   └── README.md       // Report of this project
-   ```
-
-## Recommended README.md file structure
 
 ### Team members
 
 * Member 1 (responsible for xxx)
-* Member 2 (responsible for xxx)
+* Member Jan Gross 230067 (responsible for github and code)
 
 ## Hardware description
 
-Insert descriptive text and schematic(s) of your implementation.
+Rotary encoder information is in a format of two digital signals for rotation and a digital button, analog joy-stick can be understood as two potentiometers and a digital button.
+
+<img src="https://github.com/xnanko00/Digital-electronics-2-project-1/blob/main/lab-project-1/images/schematic1.png" width=60% height=60%>
 
 ## Software description
 
 Put flowchats of your algorithm(s). Write descriptive text of your libraries and source files. Put direct links to these files in `src` or `lib` folders.
 
-## Video
-
-Insert a link to a short video with your practical implementation example (1-3 minutes, e.g. on YouTube).
-
 ## References
 
-1. Write your text here.
-2. ...
+1. https://lastminuteengineers.com/rotary-encoder-arduino-tutorial/
+2. https://res.cloudinary.com/iwh/image/upload/q_auto,g_center/assets/1/26/Digilent_PmodCLP_-_Reference_Manual.pdf
+3. https://arduino.stackexchange.com/questions/49315/using-different-adc-channels
+4. https://ww1.microchip.com/downloads/en/DeviceDoc/Atmel-7810-Automotive-Microcontrollers-ATmega328P_Datasheet.pdf
