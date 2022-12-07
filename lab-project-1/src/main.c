@@ -129,7 +129,8 @@ ISR(TIMER1_OVF_vect)
  **********************************************************************/
 ISR(ADC_vect)
 {
-    uint8_t clk, dt, speed;
+    uint8_t clk, dt;
+    uint8_t speed =10;
     uint16_t x_value, y_value;
     uint16_t up, down, left, right;
     static short x_move = 0;
@@ -141,7 +142,7 @@ ISR(ADC_vect)
     // Note that, register pair ADCH and ADCL can be read as a 16-bit value ADC
     // Convert "value" to "string" and display it
     ADCSRA |= (1<<ADSC);
-    ADMUX &= ~((1<<MUX3) | (1<<MUX2) | (1<<MUX1) | (1<<MUX0));
+    ADMUX &= ~((1<<MUX3) | (1<<MUX2) | (1<<MUX1) | (1<<MUX0)); //ADC0
     x_value = ADC;
     itoa(x_value, string, 10);
     lcd_gotoxy(8, 0);
@@ -172,7 +173,7 @@ ISR(ADC_vect)
     
 
     move++;
-    if (move >= 10)
+    if (move >= speed)
     {
       lcd_gotoxy(x_move, y_move);
       lcd_puts(" ");
@@ -188,20 +189,15 @@ ISR(ADC_vect)
       if (x_move < 0)
         x_move = 15;
 
-    clk = (PIND & (1<<CLK))>>ROT_CLK;
-    dt = (PIND & (1<<DT))>>ROT_DT;
-      if (clk>dt)
-      {
-        speed++;
-      }else if (clk<dt){
-        speed--;
-      }
-      
+      clk = (PINB & (1<<CLK))>>CLK;
+      dt = (PINB & (1<<DT))>>DT;
+      if(clk>dt);
+      speed++;
+      if(clk<dt);
+      speed--;
     }
     
     lcd_gotoxy(x_move, y_move);
     lcd_putc(0x00);
-
-
           
 }
